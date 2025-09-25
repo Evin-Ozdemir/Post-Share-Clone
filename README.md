@@ -8,6 +8,12 @@ It allows users to:
 
 ---
 
+## 🎥 Live Demo  
+
+
+https://github.com/user-attachments/assets/5095ed21-dd4a-4bc5-aea9-73c388a50f7c
+
+---
 ## 🛠️ Tech Stack  
 
 ### 🎨 Frontend  
@@ -36,9 +42,3 @@ It allows users to:
 
 ---
 
-## 🚀 Installation & Setup  
-
-1. **Clone the repository**  
-```bash
-git clone https://github.com/yourusername/postshare.git
-cd postshare
