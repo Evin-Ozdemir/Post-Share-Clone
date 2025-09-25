@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#3B82F6" />
+    <meta
+      name="description"
+      content="PostShare - Düşüncelerinizi paylaşın, başkalarının fikirlerini keşfedin ve toplulukla bağlantı kurun."
+    />
+    <meta
+      name="keywords"
+      content="social media, posts, sharing, community, social network"
+    />
+    <meta name="author" content="PostShare Team" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://postshare.app/" />
+    <meta property="og:title" content="PostShare - Social Media Platform" />
+    <meta
+      property="og:description"
+      content="Düşüncelerinizi paylaşın, başkalarının fikirlerini keşfedin ve toplulukla bağlantı kurun."
+    />
+    <meta property="og:image" content="%PUBLIC_URL%/logo512.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://postshare.app/" />
+    <meta
+      property="twitter:title"
+      content="PostShare - Social Media Platform"
+    />
+    <meta
+      property="twitter:description"
+      content="Düşüncelerinizi paylaşın, başkalarının fikirlerini keşfedin ve toplulukla bağlantı kurun."
+    />
+    <meta property="twitter:image" content="%PUBLIC_URL%/logo512.png" />
+
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- PWA Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="PostShare" />
+    <meta name="msapplication-TileColor" content="#3B82F6" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <title>PostShare - Social Media Platform</title>
+  </head>
+  <body>
+    <noscript
+      >Bu uygulamayı çalıştırmak için JavaScript'i etkinleştirmeniz
+      gerekiyor.</noscript
+    >
+    <div id="root"></div>
+
+    <!-- Service Worker Registration -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then((registration) => {
+              console.log("SW registered: ", registration);
+            })
+            .catch((registrationError) => {
+              console.log("SW registration failed: ", registrationError);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
